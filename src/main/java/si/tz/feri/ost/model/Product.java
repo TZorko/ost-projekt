@@ -1,7 +1,5 @@
 package si.tz.feri.ost.model;
 
-import com.sun.javafx.beans.IDProperty;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 

@@ -35,10 +35,12 @@ public class RESTController {
         if (params.size() == 0) {
             list = productRepository.findAll();
         } else {
-            productRepository.
-            return ResponseEntity.noContent().build();
+            //productRepository.
+            //return ResponseEntity.noContent().build();
+            list = Collections.emptyList();
         }
 
+        //return ResponseEntity.noContent().build();
         return ResponseEntity.ok(list);
         /*
         Product p = new Product();
