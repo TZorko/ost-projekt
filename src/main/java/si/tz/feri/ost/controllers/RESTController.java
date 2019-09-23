@@ -31,17 +31,12 @@ public class RESTController {
     @GetMapping("products")
     public ResponseEntity<List<Product>> getProducts(@RequestParam Map<String,String> params)
     {
-        List<Product> list;
         if (params.size() == 0) {
-            list = productRepository.findAll();
-        } else {
-            //productRepository.
-            //return ResponseEntity.noContent().build();
-            list = Collections.emptyList();
+            ResponseEntity.ok(productRepository.findAll());
         }
 
         //return ResponseEntity.noContent().build();
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(Collections.emptyList());
         /*
         Product p = new Product();
         p.setName("Product 1");
